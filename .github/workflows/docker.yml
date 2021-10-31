@@ -13,8 +13,8 @@ jobs:
       contents: read
     strategy:
       matrix:
-        name: [bash, vim]
-        user: [${{ github.repository_owner }}]
+        name: ["bash", "vim"]
+        user: ["${{ github.repository_owner }}"]
     steps:
       - name: Checkout
         uses: actions/checkout@v2

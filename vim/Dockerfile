@@ -1,4 +1,4 @@
-FROM mogeko/bash
+FROM ghcr.io/mogeko/bash
 
 ARG VIMRC=https://raw.githubusercontent.com/mogeko/dotfiles/master/vim/.vimrc
 ARG VIM_PLUG=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

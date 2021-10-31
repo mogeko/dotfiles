@@ -13,10 +13,8 @@ jobs:
       contents: read
     strategy:
       matrix:
-        include:
-          - name: bash
-          - build-arg: USER=${{ github.repository_owner }}
-        name: [vim]
+        name: [bash, vim]
+        build-arg: USER=${{ github.repository_owner }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,14 +22,11 @@ jobs:
           fetch-depth: 0
       - name: Build image
         run: |
-          if [ ${{ matrix.build-arg }} ]; then
-            docker build . --file ${{ matrix.name }}/Dockerfile \
-              --build-arg ${{ matrix.build-arg }} --tag ${{ matrix.name }} \
-              --label "BUILD_ID=${GITHUB_RUN_ID}"
-          else
-            docker build . --file ${{ matrix.name }}/Dockerfile \
-              --tag ${{ matrix.name }} --label "BUILD_ID=${GITHUB_RUN_ID}"
-          fi
+          docker build ${{ matrix.name }} \
+            --file ${{ matrix.name }}/Dockerfile \
+            --build-arg ${{ matrix.build-arg }} \
+            --label "BUILD_ID=${GITHUB_RUN_ID}" \
+            --tag ${{ matrix.name }}
       - name: Log in to registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Push image

@@ -15,6 +15,7 @@ jobs:
       matrix:
         name: ["bash", "vim"]
         user: ["${{ github.repository_owner }}"]
+      max-parallel: 1
     steps:
       - name: Checkout
         uses: actions/checkout@v2

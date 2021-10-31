@@ -17,10 +17,10 @@ alias myip='ip addr | grep inet | grep -v 127.0.0.1'
 alias targz='tar -czvf'
 
 # Not compatible with busybox
-alias rm='rm -I --preserve-root'
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
+#alias rm='rm -I --preserve-root'
+#alias chown='chown --preserve-root'
+#alias chmod='chmod --preserve-root'
+#alias chgrp='chgrp --preserve-root'
 
 # Dependency needed
 # Need: openssl git wget htop hub

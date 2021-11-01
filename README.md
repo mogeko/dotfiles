@@ -8,9 +8,10 @@ Backup self-use dotfiles.
 
 | Name       | URL                       | Dockerfile                | Download                                       |
 |------------|---------------------------|---------------------------|------------------------------------------------|
-| .bashrc    | [:link: dotfiles/bash]    | [:heavy_check_mark: bash] | [:arrow_down: click me (.zip)][aria2c_dl_link] |
-| .vimrc     | [:link: dotfiles/vim]     | [:heavy_check_mark: vim]  | [:arrow_down: click me (.zip)][bash_dl_link]   |
-| aria2.conf | [:link: dotfiles/aria2c]  | :x:                       | [:arrow_down: click me (.zip)][vim_dl_link]    |
+| .bashrc    | [:link: dotfiles/bash]    | [:heavy_check_mark: bash] | [:arrow_down: click me (.zip)][bash_dl_link]   |
+| .vimrc     | [:link: dotfiles/vim]     | [:heavy_check_mark: vim]  | [:arrow_down: click me (.zip)][vim_dl_link]    |
+| aria2.conf | [:link: dotfiles/aria2c]  | :x:                       | [:arrow_down: click me (.zip)][aria2c_dl_link] |
+| mpv.conf   | [:link: dotfiles/mpv]     | :x:                       | [:arrow_down: click me (.zip)][mpv_dl_link]    |
 
 ## License
 
@@ -25,6 +26,7 @@ The code in this project is released under the [MIT License][license_link].
 [:link: dotfiles/aria2c]: https://github.com/mogeko/dotfiles/tree/master/aria2c
 [:link: dotfiles/bash]: https://github.com/mogeko/dotfiles/tree/master/bash
 [:link: dotfiles/vim]: https://github.com/mogeko/dotfiles/tree/master/vim
+[:link: dotfiles/mpv]: https://github.com/mogeko/dotfiles/tree/master/mpv
 [license_link]: https://github.com/mogeko/dotfiles/blob/master/LICENSE
 
 <!-- ghcr links -->
@@ -35,3 +37,4 @@ The code in this project is released under the [MIT License][license_link].
 [aria2c_dl_link]: https://download-directory.github.io/?url=https://github.com/mogeko/dotfiles/tree/master/aria2c
 [bash_dl_link]: https://download-directory.github.io/?url=https://github.com/mogeko/dotfiles/tree/master/bash
 [vim_dl_link]: https://download-directory.github.io/?url=https://github.com/mogeko/dotfiles/tree/master/vim
+[mpv_dl_link]: https://download-directory.github.io/?url=https://github.com/mogeko/dotfiles/tree/master/mpv

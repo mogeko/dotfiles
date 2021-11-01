@@ -2,6 +2,8 @@
 
 Fork from [mogeko/aria2.conf (gist)](https://gist.github.com/mogeko/64a20bc441cb43a7b26e416270c10168).
 
+These configurations should be stored in: `~/.aria2`
+
 自用的 Aria2 配置，在 [3TERX/aria2.conf](https://github.com/P3TERX/aria2.conf) 的基础上改的。
 
 在继承 [3TERX/aria2.conf](https://github.com/P3TERX/aria2.conf) 的优点外做了以下改动:

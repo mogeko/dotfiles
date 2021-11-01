@@ -23,8 +23,8 @@ jobs:
           fetch-depth: 0
       - name: Build image
         run: |
-          docker build ${{ matrix.name }} \
-            --file ${{ matrix.name }}/Dockerfile \
+          docker build .dockerfiles \
+            --file .dockerfiles/${{ matrix.name }}.dockerfile \
             --build-arg "USER=${{ matrix.user }}" \
             --label "BUILD_ID=${GITHUB_RUN_ID}" \
             --label "BUILD_SERVER=${GITHUB_SERVER_URL}" \

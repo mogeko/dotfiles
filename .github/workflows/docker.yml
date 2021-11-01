@@ -23,19 +23,17 @@ jobs:
           fetch-depth: 0
       - name: Build image
         run: |
-          cd ${GITHUB_WORKSPACE}/${{ matrix.name }}
-          docker build . \
+          docker build ${{ matrix.name }} \
+            --file ${{ matrix.name }}/Dockerfile \
             --build-arg "USER=${{ matrix.user }}" \
             --label "BUILD_ID=${GITHUB_RUN_ID}" \
             --label "BUILD_SERVER=${GITHUB_SERVER_URL}" \
             --label "OS=${RUNNER_OS}" \
-            --tag ${{ matrix.name }} \
-            --file Dockerfile
+            --tag ${{ matrix.name }}
       - name: Log in to registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: Push image
         run: |
-          cd ${GITHUB_WORKSPACE}/${{ matrix.name }}
           IMAGE_ID=ghcr.io/${{ github.repository_owner }}/${{ matrix.name }}
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')

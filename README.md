@@ -12,6 +12,10 @@ Backup self-use dotfiles.
 | .vimrc     | [dotfiles/vim][vim_link]       | :heavy_check_mark: |
 | aria2.conf | [dotfiles/aria2c][aria2c_link] | :x:                |
 
+## License
+
+The code in this project is released under the [MIT License][license_link].
+
 
 <!-- badges -->
 [badge_icon]: https://github.com/mogeko/dotfiles/actions/workflows/docker.yml/badge.svg
@@ -20,4 +24,5 @@ Backup self-use dotfiles.
 <!-- links -->
 [aria2c_link]: https://github.com/mogeko/dotfiles/tree/master/aria2c
 [bash_link]: https://github.com/mogeko/dotfiles/tree/master/bash
+[license_link]: https://github.com/mogeko/dotfiles/blob/master/LICENSE
 [vim_link]: https://github.com/mogeko/dotfiles/tree/master/vim

@@ -1,0 +1,8 @@
+[user]
+	name = Mogeko
+	email = zhengjunyi@live.com
+	signingkey = 199C84D80D3C1E9E
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true

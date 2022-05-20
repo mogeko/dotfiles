@@ -33,7 +33,7 @@ if [ "${_OS_NAME}" == "darwin" ]; then
   install -v -m 0644 "./bash/macos.bash_profile" "${HOME}/.bash_profile"
   install -v -m 0644 "./bash/macos.bash_aliases" "${HOME}/.bash_aliases"
 elif [ "${_OS_NAME}" == "linux" ]; then
-  install -v -m 0644 "./bash/linux.bashrc" "${HOME}/.bash_profile"
+  install -v -m 0644 "./bash/linux.bashrc" "${HOME}/.bashrc"
   install -v -m 0644 "./bash/linux.bash_aliases" "${HOME}/.bash_aliases"
 fi
 

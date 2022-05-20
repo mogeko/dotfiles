@@ -13,14 +13,8 @@ alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
 #alias myip='/sbin/ifconfig -a | grep inet | grep -v 127.0.0.1 | grep -v inet6'
-alias myip='ip addr | grep inet | grep -v 127.0.0.1'
+alias myip='ifconfig | grep -P "192.168.(\d+.){2}"'
 alias targz='tar -czvf'
-
-# Not compatible with busybox
-#alias rm='rm -I --preserve-root'
-#alias chown='chown --preserve-root'
-#alias chmod='chmod --preserve-root'
-#alias chgrp='chgrp --preserve-root'
 
 # Dependency needed
 # Need: openssl git wget htop hub
@@ -39,7 +33,7 @@ extract() {
     # display usage if no parameters given
     echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
   else
-    if [ -f $1 ] ; then
+    if [[ -f "$1" ]]; then
       #NAME=${1%.*}
       #mkdir $NAME && cd $NAME
       case $1 in
@@ -65,7 +59,9 @@ extract() {
     fi
   fi
 }
+
 backup() { cp "$1"{,.bak};}
+
 stopwatch() {
   START=`date +%s%N`;
   $1

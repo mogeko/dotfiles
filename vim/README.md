@@ -10,7 +10,7 @@ Open the terminal and run:
 
 ```
 curl -fL -o ~/.vimrc -o ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/mogeko/dotfiles/master/{.vimrc,.vim/autoload/plug.vim}
+    https://raw.githubusercontent.com/mogeko/dotfiles/master/{vimrc,vim/autoload/plug.vim}
 ```
 
 For Archlinux:
@@ -18,7 +18,7 @@ For Archlinux:
 ```
 sudo pacman -Syu vim-plug
 
-curl -fLo ~/.vimrc --create-dirs https://raw.githubusercontent.com/mogeko/dotfiles/master/.vimrc
+curl -fLo ~/.vimrc --create-dirs https://raw.githubusercontent.com/mogeko/dotfiles/master/vimrc
 ```
 
 Then open vim and execute `:PlugInstall`.

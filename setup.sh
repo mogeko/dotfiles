@@ -23,11 +23,11 @@ if [ "${_OS_NAME}" == "darwin" ]; then
   fi
   echo -e "Installing dotfiles...\n"
   install -dvm 0755 "${_PREFIX}"
-  install -Cvm 0644 "./bash/macos.bash_profile" "${_PREFIX}/.bash_profile"
-  install -Cvm 0644 "./bash/macos.bash_aliases" "${_PREFIX}/.bash_aliases"
+  install -Cvm 0644 "./_bash/macos.bash_profile" "${_PREFIX}/.bash_profile"
+  install -Cvm 0644 "./_bash/macos.bash_aliases" "${_PREFIX}/.bash_aliases"
 elif [ "${_OS_NAME}" == "linux" ]; then
-  install -CDvm 0644 "./bash/linux.bashrc" "${_PREFIX}/.bashrc"
-  install -CDvm 0644 "./bash/linux.bash_aliases" "${_PREFIX}/.bash_aliases"
+  install -CDvm 0644 "./_bash/linux.bashrc" "${_PREFIX}/.bashrc"
+  install -CDvm 0644 "./_bash/linux.bash_aliases" "${_PREFIX}/.bash_aliases"
 fi
 
 install -dvm 0755 "${_PREFIX}/.vim/autoload"

@@ -1,0 +1,31 @@
+#
+# ~/.bash_completion
+#
+
+# >>> pnpm completion >>>
+# source completion script for pnpm
+if [[ -r "${HOME}/.config/tabtab/bash/pnpm.bash" ]]; then
+  source "${HOME}/.config/tabtab/bash/pnpm.bash"
+fi
+# <<< pnpm completion <<<
+
+# >>> conda completion >>>
+# Completion script for conda
+_conda() {
+  if (( ${#COMP_WORDS[@]} < 3 )); then
+    COMPREPLY=( $(compgen -W "activate deactivate clean config create help info init install list package remove uninstall run search update upgrade env -h --help -V --version" -- $2 ) );
+  else
+    if [[ $3 == "activate" ]]; then
+      local cur="${COMP_WORDS[COMP_CWORD]}";
+      local envs="base $(ls "/opt/homebrew/Caskroom/miniconda/base/envs/")";
+      COMPREPLY=( $(compgen -W "${envs[*]}" -- $cur) );
+    elif [[ $3 == "env" ]]; then
+      local cur="${COMP_WORDS[COMP_CWORD]}";
+      COMPREPLY=( $(compgen -W "create export list remove update -h --help" -- $cur) );
+    fi
+  fi
+}
+
+complete -F _conda conda;
+# <<< conda completion <<<
+
